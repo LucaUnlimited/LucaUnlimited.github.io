@@ -322,6 +322,49 @@ a:hover {
 }
 
 /* Back to top button */
+.whatsapp-float {
+  position: fixed;
+  display: none;
+  background: #26d366;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 1;
+  font-size: 22px;
+  border-radius: 50%;
+  right: 15px;
+  bottom: 70px;
+  transition: background 0.5s;
+  z-index: 11;
+}
+
+.whatsapp-float i {
+  padding-top: 11px;
+  color: #fff;
+}
+
+.github-float {
+  position: fixed;
+  display: none;
+  background: rgb(40, 40, 40);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 1;
+  font-size: 30px;
+  border-radius: 50%;
+  right: 15px;
+  bottom: 125px;
+  transition: background 0.5s;
+  z-index: 11;
+}
+
+.github-float i {
+  padding-top: 7px;
+  color: #fff;
+}
 
 .back-to-top {
   position: fixed;

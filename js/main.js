@@ -33,6 +33,22 @@
     return false;
   });
 
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 150) {
+      $(".whatsapp-float").fadeIn("slow");
+    } else {
+      $(".whatsapp-float").fadeOut("slow");
+    }
+  });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      $(".github-float").fadeIn("slow");
+    } else {
+      $(".github-float").fadeOut("slow");
+    }
+  });
+
   /*--/ Star ScrollTop /--*/
   $(".scrolltop-mf").on("click", function () {
     $("html, body").animate(
