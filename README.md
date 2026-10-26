@@ -4,15 +4,22 @@ Personal portfolio for **Luca Rivera**, Systems Analyst and Full-Stack Developer
 
 ## Selected work
 
-- **TangoDash** - paid client project for Tango ERP-connected stock management, replenishment rules, purchase orders and exports. Source and business data are private.
-- **G2 Dashboard** - a separate paid client project covering business operations and finance. Source and business data are private.
+- **TangoDash** - paid client project for Tango ERP-connected stock management, replenishment rules, purchase orders and exports. [Read the case study](https://lucaunlimited.github.io/projects/tangodash/). Source and business data are private.
+- **G2 Dashboard** - a separate paid client project covering business operations and finance. [Read the case study](https://lucaunlimited.github.io/projects/g2-dashboard/). Source and business data are private.
 - **Personal projects** - tono, a Spotify playlist organizer; Mesa de Juegos, a shared mobile-first scorekeeper; plus a brief, optional note about a computer-vision experiment.
 
 ## Site features
 
-- English and Spanish content
+- English homepage: `/`
+- Spanish homepage: `/es/`
+- Detailed bilingual case studies for TangoDash and G2 Dashboard
 - Light and dark themes
 - English and Spanish CV downloads
 - Responsive static HTML, CSS and JavaScript; no build step
+- Search metadata, language alternates, structured data, `robots.txt` and `sitemap.xml`
+
+## Search discovery
+
+The sitemap is available at `/sitemap.xml`; `robots.txt` points crawlers to it. Verify the domain in Google Search Console and Bing Webmaster Tools to review indexing and search-query data. A sitemap helps crawlers discover URLs but does not guarantee indexing or ranking.
 
 GitHub Pages: [lucaunlimited.github.io](https://lucaunlimited.github.io/)

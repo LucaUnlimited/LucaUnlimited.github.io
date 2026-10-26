@@ -102,3 +102,6 @@ html[data-theme="dark"] .service-icon,html[data-theme="dark"] .project-link,html
 .theme-icon-sun{display:none}
 html[data-theme="dark"] .theme-icon-moon{display:none}
 html[data-theme="dark"] .theme-icon-sun{display:block}
+
+/* Search-focused navigation additions */
+.language-toggle{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;min-width:30px;height:30px;font:500 9px var(--mono);color:var(--ink);border:1px solid var(--line);border-radius:50%;} .language-toggle:hover{border-color:var(--accent);color:var(--accent)} .case-study-link{align-self:flex-start;margin-top:12px}.seo-work-links{font-size:11px;line-height:1.8;color:var(--muted);margin:0 0 18px}.seo-work-links a{color:var(--accent);text-underline-offset:3px}.project-featured .case-study-link{font-size:11px}.theme-toggle:focus-visible,.language-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
