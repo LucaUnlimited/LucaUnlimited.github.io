@@ -1,18 +1,19 @@
 const languageButton = document.querySelector("#language-toggle");
 const translatable = document.querySelectorAll("[data-en][data-es]");
 const themeButton = document.querySelector("#theme-toggle");
-const themeLabel = themeButton.querySelector(".theme-label");
+let language = localStorage.getItem("portfolio-language") || "en";
 let theme = localStorage.getItem("portfolio-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
 function setTheme(nextTheme) {
   theme = nextTheme;
   document.documentElement.dataset.theme = theme;
-  const dark = theme === "dark";
-  themeButton.setAttribute("aria-label", dark ? (language === "en" ? "Switch to light mode" : "Cambiar a modo claro") : (language === "en" ? "Switch to dark mode" : "Cambiar a modo oscuro"));
-  themeLabel.textContent = dark ? (language === "en" ? "Light" : "Claro") : (language === "en" ? "Dark" : "Oscuro");
+  const label = theme === "dark"
+    ? (language === "en" ? "Switch to light mode" : "Cambiar a modo claro")
+    : (language === "en" ? "Switch to dark mode" : "Cambiar a modo oscuro");
+  themeButton.setAttribute("aria-label", label);
+  themeButton.title = label;
   localStorage.setItem("portfolio-theme", theme);
 }
-let language = localStorage.getItem("portfolio-language") || "en";
 
 function setLanguage(nextLanguage) {
   language = nextLanguage;
@@ -22,8 +23,11 @@ function setLanguage(nextLanguage) {
   }
   languageButton.textContent = language === "en" ? "ES" : "EN";
   languageButton.setAttribute("aria-label", language === "en" ? "Cambiar a español" : "Switch to English");
-  themeButton.setAttribute("aria-label", theme === "dark" ? (language === "en" ? "Switch to light mode" : "Cambiar a modo claro") : (language === "en" ? "Switch to dark mode" : "Cambiar a modo oscuro"));
-  themeLabel.textContent = theme === "dark" ? (language === "en" ? "Light" : "Claro") : (language === "en" ? "Dark" : "Oscuro");
+  const themeLabel = theme === "dark"
+    ? (language === "en" ? "Switch to light mode" : "Cambiar a modo claro")
+    : (language === "en" ? "Switch to dark mode" : "Cambiar a modo oscuro");
+  themeButton.setAttribute("aria-label", themeLabel);
+  themeButton.title = themeLabel;
   localStorage.setItem("portfolio-language", language);
 }
 
@@ -32,4 +36,3 @@ themeButton.addEventListener("click", () => setTheme(theme === "dark" ? "light" 
 document.querySelector("#year").textContent = new Date().getFullYear();
 setTheme(theme);
 setLanguage(language);
-
